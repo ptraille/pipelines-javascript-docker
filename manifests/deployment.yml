@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ptraillepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ptraillepipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: ptraillepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: ptraillepipelinesjavascriptdocker 
+          image: smarthotel360cr.azurecr.io/ptraillepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
